@@ -1,0 +1,13 @@
+<div class="mb-8 shadow-lg">
+  <%= image_tag "update.jpg", class:"rounded-t w-full" %>
+  <div class="p-5">
+    <h4 class="text-xl"><%= article.title %></h4>
+    <p class="text-sm text-gray-700"><%= article.content %></p>
+    <div class="flex items-center justify-between mt-4">
+      <div class="w-10 h-10 relative">
+        <img src="https://pickaface.net/gallery/avatar/unr_random_180410_1905_z1exb.png" alt="avatar" class="rounded-full object-cover object-center w-full h-full visible group-hover:hidden"/>
+      </div>
+      <div class="text-sm text-gray-700"><%= article.created_at.strftime("%d %m") %></div>
+    </div>
+  </div>
+</div>

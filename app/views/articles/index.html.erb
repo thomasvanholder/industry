@@ -1,6 +1,35 @@
-<div class="bg-fixed bg-center bg-cover flex justify-center items-center" style="height: 55vh;background-image: url(<%= asset_path 'people.jpg' %>)">
+<div class="bg-fixed bg-center bg-cover flex justify-center items-center" style="height: 40vh;background-image: url(<%= asset_path 'people.jpg' %>)">
   <div class="text-center mx-auto">
     <h1 class="text-5xl text-gray-300">Newsroom</h1>
     <p class="text-gray-200 w-2/5 mx-auto">Keep up to date with what we're working on! Italcopie is an ever evolving company with regular updates.</p>
+  </div>
+</div>
+
+
+<div class="container mt-20 max-w-screen-lg px-10 mx-auto">
+  <div class="md:flex rounded shadow-lg mb-11 h-64">
+    <div ><%= image_tag "speaker.jpg", class:"rounded-l md:h-full w-full pr-4" %></div>
+    <div class="px-4 md:mx-auto">
+      <h2 class="font-medium text-2xl">How Google helps you record stories for kids</h2>
+      <p class="mb-4 text-gray-700">Google is constantly updating its consumer AI, Google Assistant, with new features.</p>
+
+      <%# Avatar %>
+      <div class="flex items-center justify-between">
+        <div class="w-10 h-10 relative">
+          <img src="https://pickaface.net/gallery/avatar/unr_random_180410_1905_z1exb.png" alt="avatar" class="rounded-full object-cover object-center w-full h-full visible group-hover:hidden"/>
+        </div>
+        <div class="text-sm text-gray-700 mr-8">5 Jul 20</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-20 mx-auto max-w-screen-lg px-10">
+  <h4 class="text-xl mb-8">Lastest news</h4>
+
+  <div class="grid grid-cols-3 gap-4">
+    <% @articles.each do |article| %>
+      <%= render 'card', article: article %>
+    <% end %>
   </div>
 </div>

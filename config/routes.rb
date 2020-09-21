@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    resources :articles
+
+    root to: 'articles#index'
+  end
   root 'pages#home'
   get '/contact' => 'pages#contact'
   get '/distributors' => 'pages#distributors'

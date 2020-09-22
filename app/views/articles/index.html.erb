@@ -28,7 +28,9 @@
 
   <div class="grid grid-cols-3 gap-4">
     <% @articles.each do |article| %>
-      <%= render 'card', article: article %>
+      <%= link_to article_path(article) do %>
+        <%= render 'card', article: article %>
+      <% end %>
     <% end %>
   </div>
 </div>

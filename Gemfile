@@ -39,6 +39,8 @@ gem 'administrate-field-active_storage'
 gem 'image_processing'
 gem 'mini_magick'
 
+gem 'geocoder'
+
 group :development, :test do
   gem 'dotenv-rails'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

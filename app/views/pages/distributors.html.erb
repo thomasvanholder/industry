@@ -1,20 +1,19 @@
 <div class="flex">
-  <div class="flex flex-wrap mx-4 mt-5" style="width: 42%;">
+  <div class="flex flex-wrap mx-4 mt-5 md:w-2/5" >
     <% @distributors.each do |disti| %>
-      <div class="max-w-xs rounded overflow-scroll shadow-lg w-1/2 m-2 mx-auto">
+      <div class="max-w-xs rounded overflow-scroll shadow-lg md:w-1/2 m-2 mx-auto">
         <div class="px-3 py-4">
           <div class="font-bold text-xl mb-2"><%= disti.name %></div>
           <p class="text-gray-700 text-base"><%= disti.email %></p>
           <p class="text-gray-700 text-base"><%= disti.phone %></p>
           <p class="text-gray-700 text-base"><%= disti.website %></p>
         </div>
-        <div class="px-6 pt-4 pb-2">
+        <div class="px-5 py-2">
           <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"><%= disti.address %></span>
         </div>
       </div>
-
     <% end %>
 
   </div>
-  <div id="map" style="width: 58%; height: calc(100vh - 97px); top:0px" class="mt-1 sticky" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+  <div id="map" style=" height: calc(100vh - 97px); top:0px" class="md:w-3/5 mt-5 sticky" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 </div>

@@ -1,6 +1,6 @@
-<div class="container max-w-screen-md mx-auto px-6 text-center">
+<div class="container max-w-screen-md mx-auto px-6 text-center"  style="min-height: calc(100vh - 96px - 440px)">
   <h3 class="text-3xl font-semibold mt-16 mb-5">
-    <%= @article.title %>
+    <%= @article.title.capitalize %>
   </h3>
 
   <div class="py-4 mb-5 border-t border-b mx-8">
@@ -12,44 +12,33 @@
             <span class="h6">
               <a href="" class="text-teal-500">Hanna Wolfe</a>
               <button type="button" class="text-gray-200 text-xs h-6 rounded px-2 ml-1 bg-teal-500">Follow</button></span>
-            <span class="d-block text-muted text-left">July 15, 2018</span>
+            <span class="d-block text-muted text-left"><%= @article.created_at.strftime("%b %d, %Y") %></span>
           </div>
         </div>
       </div>
-      <div class="w-2/5">
+      <div class="w-2/5 flex my-auto justify-end">
         <span class="block text-sm font-normal text-gray-700 mr-2">Share:</span>
-
-        <a class="text-sm w-6 h-6 bg-gray-600 rounded ml-2" href="#">
+        <a class="text-sm w-6 h-6 rounded ml-1 text-teal-500" href="#">
           <i class="fab fa-twitter"></i>
+        </a>
+        <a class="text-sm w-6 h-6 rounded ml-1 text-teal-500" href="#">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a class="text-sm w-6 h-6 rounded ml-1 text-teal-500" href="#">
+          <i class="fab fa-telegram"></i>
         </a>
       </div>
     </div>
   </div>
 
-  <%= @article.content %>
-  <i class="fab fa-twitter"></i>
-
-  <div class="border-top border-bottom ">
-    <div class="row align-items-md-center">
-
-      <div class="col-md-5">
-        <div class="d-flex justify-content-md-end align-items-center">
-          <span class="d-block small font-weight-bold text-cap mr-2">Share:</span>
-          <a class="btn btn-xs btn-icon btn-soft-secondary rounded-circle ml-2" href="#">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a class="btn btn-xs btn-icon btn-soft-secondary rounded-circle ml-2" href="#">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a class="btn btn-xs btn-icon btn-soft-secondary rounded-circle ml-2" href="#">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a class="btn btn-xs btn-icon btn-soft-secondary rounded-circle ml-2" href="#">
-            <i class="fab fa-telegram"></i>
-          </a>
-        </div>
-      </div>
-    </div>
+  <div class="my-5">
+    <%= @article.content %>
+  </div>
+  <div class="my-5">
+    <%= @article.content %>
+  </div>
+  <div class="my-5">
+    <%= @article.content %>
   </div>
 
 

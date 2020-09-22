@@ -10,7 +10,7 @@ puts 'creating articles'
 10.times do
   article = Article.create(
     title: Faker::Marketing.buzzwords,
-    content: Faker::Quote.famous_last_words
+    content: Faker::Lorem.paragraph(sentence_count: 9)
   )
   # file = URI.open('https://source.unsplash.com/400x300/?article')
   # article.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')

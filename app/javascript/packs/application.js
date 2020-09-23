@@ -17,3 +17,11 @@ require("channels");
 
 // Tailwind CSS
 import "css/application";
+
+import { initMapbox } from "../plugins/mapbox";
+import { initAutocomplete } from "../plugins/autocomplete";
+
+document.addEventListener("turbolinks:load", () => {
+  initMapbox();
+  initAutocomplete();
+});

@@ -1,19 +1,36 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="bg-center bg-cover flex justify-center items-center" style="height: 55vh;background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path 'metal.jpg' %>)">
+  <div class="text-center mx-auto">
+    <h1 class="text-6xl text-gray-300">Italcopie Sensori</h1>
+    <p class="text-gray-200 text-2xl w-4/5 mx-auto">Design, manufacture and marketing of thermocouples and industrial instrumentation</p>
+  </div>
+</div>
 
-<input class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal" type="email" placeholder="jane@example.com">
 
-<div class="max-w-sm rounded overflow-hidden shadow-lg">
-  <img class="w-full" src="" alt="Sunset in the mountains">
-  <div class="px-6 py-4">
-    <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-    <p class="text-gray-700 text-base">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+<div class="container text-center mx-auto my-20">
+  <h1 class=" text-gray-600 uppercase">How we work</h1>
+  <h2 class="text-3xl w-1/2 mx-auto md:px-6 mt-3">Bring your ideas to life. We will make any custom temperature probe for you.</h2>
+</div>
+
+
+<div class="container mx-auto flex justify-center my-10">
+  <ul class="w-1/4  space-y-6 pt-2">
+    <li class="flex items-center"><i class="fas fa-check-circle text-xl text-teal-500 mr-2"></i>Custom designed probes</li>
+    <li class="flex items-center"><i class="fas fa-check-circle text-xl text-teal-500 mr-2"></i>Co-creation with customer</li>
+    <li class="flex items-center"><i class="fas fa-check-circle text-xl text-teal-500 mr-2"></i>Research and innovation driven</li>
+    <li class="flex items-center"><i class="fas fa-check-circle text-xl text-teal-500 mr-2"></i>Multiple production technologies</li>
+    <li class="flex items-center"><i class="fas fa-check-circle text-xl text-teal-500 mr-2"></i><span class="text-teal-500">all our procucts</span></li>
+  </ul>
+
+  <div class="w-1/4 shadow-md px-6 pt-2 pb-6 rounded">
+    <%= image_tag "factory.svg", size:"100x150"%>
+    <h1 class="text-xl mt-3">We produce any probe, custom to your needs</h1>
+    <p class="text-gray-600 mt-3">
+      Long text comes here. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.
     </p>
   </div>
-  <div class="px-6 pt-4 pb-2">
-    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-  </div>
+</div>
+
+
+<div class="container mx-auto">
+  <%# elements %>
 </div>
